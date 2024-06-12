@@ -7,7 +7,7 @@
 <![CDATA[
 @font-face{
 font-family:"STXingkai";
-src:url(STXINGKA.TTF);
+src:url(./STXINGKA.TTF);
 }
 ]]>
 </style>
