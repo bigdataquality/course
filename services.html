@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.staticfile.net/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
-   
+    <link  href="./bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./echarts/echarts.min.js"></script>
+    
+    
+
+    
     <title>在服务---大数据素养</title>
 </head>
 <style>
@@ -30,7 +33,7 @@
     <div class="container-fluid p-0 ">
         <div class="d-flex flex-wrap  justify-content-left ">
             <div class="d-flex align-items-center  me-auto">
-                <img  id="logo" src="./to_weed.svg">
+                <img  id="logo" src="./images/to_weed.svg">
                 <a href="./index.html" style="text-decoration:none;color:black">
                     <span id="course" class="navbar-brand" style="font-family:STXingkai;font-size:19px;">大数据素养</span>
                 </a>
@@ -68,7 +71,7 @@
     <div id="historyTotal" class="container-fluid p-0 border rounded mt-1" style="height:399px;"></div>
         <script>
             var chart_historyTotal = echarts.init(
-                document.getElementById('historyTotal'), 'white', {renderer: 'svg'});
+                document.getElementById('historyTotal'), 'white', {renderer: 'canvas'});
             var option_historyTotal = {
         "animation": true,
         "animationThreshold": 2000,
@@ -105,7 +108,8 @@
                     "82",
                     "184",
                     "191",
-                    "280"
+                    "280",
+                    "243"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -138,7 +142,8 @@
                     "19",
                     "197",
                     "116",
-                    "213"
+                    "213",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -174,7 +179,6 @@
                 "itemHeight": 14,
                 "backgroundColor": "transparent",
                 "borderColor": "#ccc",
-                "borderWidth": 1,
                 "borderRadius": 0,
                 "pageButtonItemGap": 5,
                 "pageButtonPosition": "end",
@@ -245,7 +249,8 @@
                     "2022\u5e74\u79cb\u51ac\u671f",
                     "2023\u5e74\u6625\u590f\u671f",
                     "2023\u5e74\u79cb\u51ac\u671f",
-                    "2024\u5e74\u6625\u590f\u671f"
+                    "2024\u5e74\u6625\u590f\u671f",
+                    "2024\u79cb\u51ac\u671f"
                 ]
             }
         ],
@@ -277,7 +282,7 @@
                 "show": true,
                 "text": "\u5386\u671f\u4e24\u533a---\u9752\u7750\u5ea6",
                 "target": "blank",
-                "subtext": "\u51712392\u4f4d\u5b66\u8005",
+                "subtext": "\u51712635\u4f4d\u5b66\u8005",
                 "subtarget": "blank",
                 "padding": 5,
                 "itemGap": 10,
@@ -339,7 +344,7 @@
     <div id="zhongShanCollege" class="container-fluid p-0 border rounded mt-1" style="height:399px;"></div>
         <script>
             var chart_zhongShanCollege = echarts.init(
-                document.getElementById('zhongShanCollege'), 'white', {renderer: 'svg'});
+                document.getElementById('zhongShanCollege'), 'white', {renderer: 'canvas'});
             var option_zhongShanCollege = {
         "baseOption": {
             "series": [
@@ -371,19 +376,19 @@
                     "data": [
                         {
                             "name": "\u533b\u836f\u4fe1\u606f\u5de5\u7a0b\u5b66\u9662",
-                            "value": "12"
+                            "value": "26"
                         },
                         {
                             "name": "\u533b\u836f\u5316\u5de5\u5b66\u9662",
-                            "value": "81"
+                            "value": "80"
                         },
                         {
-                            "name": "\u5546\u5b66\u9662",
-                            "value": "153"
+                            "name": "\u533b\u836f\u5546\u5b66\u9662",
+                            "value": "97"
                         },
                         {
                             "name": "\u98df\u54c1\u79d1\u5b66\u5b66\u9662",
-                            "value": "34"
+                            "value": "40"
                         }
                     ],
                     "radius": [
@@ -444,7 +449,8 @@
                     "2022\u5e74\u79cb\u51ac\u671f",
                     "2023\u5e74\u6625\u590f\u671f",
                     "2023\u5e74\u79cb\u51ac\u671f",
-                    "2024\u5e74\u6625\u590f\u671f"
+                    "2024\u5e74\u6625\u590f\u671f",
+                    "2024\u79cb\u51ac\u671f"
                 ]
             },
             "legend": [
@@ -452,7 +458,7 @@
                     "data": [
                         "\u533b\u836f\u4fe1\u606f\u5de5\u7a0b\u5b66\u9662",
                         "\u533b\u836f\u5316\u5de5\u5b66\u9662",
-                        "\u5546\u5b66\u9662",
+                        "\u533b\u836f\u5546\u5b66\u9662",
                         "\u98df\u54c1\u79d1\u5b66\u5b66\u9662"
                     ],
                     "selected": {},
@@ -463,7 +469,6 @@
                     "itemHeight": 14,
                     "backgroundColor": "transparent",
                     "borderColor": "#ccc",
-                    "borderWidth": 1,
                     "borderRadius": 0,
                     "pageButtonItemGap": 5,
                     "pageButtonPosition": "end",
@@ -1519,6 +1524,130 @@
                     "#9a60b4",
                     "#ea7ccc"
                 ]
+            },
+            {
+                "series": [
+                    {
+                        "type": "pie",
+                        "colorBy": "data",
+                        "legendHoverLink": true,
+                        "selectedMode": false,
+                        "selectedOffset": 10,
+                        "clockwise": true,
+                        "startAngle": 90,
+                        "minAngle": 0,
+                        "minShowLabelAngle": 0,
+                        "avoidLabelOverlap": true,
+                        "stillShowZeroSum": true,
+                        "percentPrecision": 2,
+                        "showEmptyCircle": true,
+                        "emptyCircleStyle": {
+                            "color": "lightgray",
+                            "borderColor": "#000",
+                            "borderWidth": 0,
+                            "borderType": "solid",
+                            "borderDashOffset": 0,
+                            "borderCap": "butt",
+                            "borderJoin": "bevel",
+                            "borderMiterLimit": 10,
+                            "opacity": 1
+                        },
+                        "data": [
+                            {
+                                "name": "\u533b\u836f\u4fe1\u606f\u5de5\u7a0b\u5b66\u9662",
+                                "value": "26"
+                            },
+                            {
+                                "name": "\u533b\u836f\u5316\u5de5\u5b66\u9662",
+                                "value": "80"
+                            },
+                            {
+                                "name": "\u533b\u836f\u5546\u5b66\u9662",
+                                "value": "97"
+                            },
+                            {
+                                "name": "\u98df\u54c1\u79d1\u5b66\u5b66\u9662",
+                                "value": "40"
+                            }
+                        ],
+                        "radius": [
+                            "10%",
+                            "55%"
+                        ],
+                        "center": [
+                            "50%",
+                            "50%"
+                        ],
+                        "roseType": "radius",
+                        "label": {
+                            "show": true,
+                            "margin": 8,
+                            "formatter": "{b}:{c}"
+                        },
+                        "labelLine": {
+                            "show": true,
+                            "showAbove": false,
+                            "length": 15,
+                            "length2": 15,
+                            "smooth": false,
+                            "minTurnAngle": 90,
+                            "maxSurfaceAngle": 90
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    }
+                ],
+                "title": [
+                    {
+                        "show": true,
+                        "text": "\u4e2d\u5c712024\u79cb\u51ac\u671f\u5404\u9662---\u9752\u7750\u5ea6",
+                        "target": "blank",
+                        "subtext": "\u5171243\u4f4d\u5b66\u8005",
+                        "subtarget": "blank",
+                        "padding": 5,
+                        "itemGap": 10,
+                        "textAlign": "auto",
+                        "textVerticalAlign": "auto",
+                        "triggerEvent": false
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                },
+                "color": [
+                    "#5470c6",
+                    "#91cc75",
+                    "#fac858",
+                    "#ee6666",
+                    "#73c0de",
+                    "#3ba272",
+                    "#fc8452",
+                    "#9a60b4",
+                    "#ea7ccc"
+                ]
             }
         ]
     };
@@ -1531,7 +1660,7 @@
     <div id="guangZhouCollege" class="container-fluid p-0 border rounded mt-1" style="height:399px;"></div>
         <script>
             var chart_guangZhouCollege = echarts.init(
-                document.getElementById('guangZhouCollege'), 'white', {renderer: 'svg'});
+                document.getElementById('guangZhouCollege'), 'white', {renderer: 'canvas'});
             var option_guangZhouCollege = {
         "baseOption": {
             "series": [
@@ -1674,7 +1803,6 @@
                     "itemHeight": 14,
                     "backgroundColor": "transparent",
                     "borderColor": "#ccc",
-                    "borderWidth": 1,
                     "borderRadius": 0,
                     "pageButtonItemGap": 5,
                     "pageButtonPosition": "end",
@@ -2707,7 +2835,8 @@
                     "0",
                     "117",
                     "0",
-                    "218"
+                    "218",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2748,7 +2877,8 @@
                     "0",
                     "168",
                     "0",
-                    "192"
+                    "192",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2789,7 +2919,8 @@
                     "63",
                     "46",
                     "166",
-                    "51"
+                    "51",
+                    "215"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2830,7 +2961,8 @@
                     "11",
                     "21",
                     "112",
-                    "12"
+                    "12",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2871,7 +3003,8 @@
                     "14",
                     "17",
                     "15",
-                    "11"
+                    "11",
+                    "14"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2912,7 +3045,8 @@
                     "3",
                     "5",
                     "1",
-                    "6"
+                    "6",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2953,7 +3087,8 @@
                     "5",
                     "4",
                     "10",
-                    "0"
+                    "0",
+                    "14"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -2994,7 +3129,8 @@
                     "5",
                     "3",
                     "3",
-                    "3"
+                    "3",
+                    "0"
                 ],
                 "realtimeSort": false,
                 "showBackground": false,
@@ -3044,7 +3180,6 @@
                 "itemHeight": 14,
                 "backgroundColor": "transparent",
                 "borderColor": "#ccc",
-                "borderWidth": 1,
                 "borderRadius": 0,
                 "pageButtonItemGap": 5,
                 "pageButtonPosition": "end",
@@ -3115,7 +3250,8 @@
                     "2022\u5e74\u79cb\u51ac\u671f",
                     "2023\u5e74\u6625\u590f\u671f",
                     "2023\u5e74\u79cb\u51ac\u671f",
-                    "2024\u5e74\u6625\u590f\u671f"
+                    "2024\u5e74\u6625\u590f\u671f",
+                    "2024\u79cb\u51ac\u671f"
                 ]
             }
         ],
@@ -3147,7 +3283,7 @@
                 "show": true,
                 "text": "\u5386\u671f\u4e24\u533a\u5404\u7ea7---\u9752\u7750\u5ea6",
                 "target": "blank",
-                "subtext": "\u51712392\u4f4d\u5b66\u8005",
+                "subtext": "\u51712635\u4f4d\u5b66\u8005",
                 "subtarget": "blank",
                 "padding": 5,
                 "itemGap": 10,
@@ -3418,7 +3554,6 @@
                     "itemHeight": 14,
                     "backgroundColor": "transparent",
                     "borderColor": "#ccc",
-                    "borderWidth": 1,
                     "borderRadius": 0,
                     "pageButtonItemGap": 5,
                     "pageButtonPosition": "end",
@@ -4676,11 +4811,1380 @@
         </script>
 
     <div id="zhongShanMajor" class="container-fluid p-0 border rounded mt-1" style="height:399px;"></div>
-        <script>
-            var chart_zhongShanMajor = echarts.init(
-                document.getElementById('zhongShanMajor'), 'white', {renderer: 'canvas'});
-            var option_zhongShanMajor = {
-        "baseOption": {
+    <script>
+        var chart_zhongShanMajor = echarts.init(
+            document.getElementById('zhongShanMajor'), 'white', {renderer: 'canvas'});
+        var option_zhongShanMajor = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "pie",
+                "colorBy": "data",
+                "legendHoverLink": true,
+                "selectedMode": false,
+                "selectedOffset": 10,
+                "clockwise": true,
+                "startAngle": 90,
+                "minAngle": 0,
+                "minShowLabelAngle": 0,
+                "avoidLabelOverlap": true,
+                "stillShowZeroSum": true,
+                "percentPrecision": 2,
+                "showEmptyCircle": true,
+                "emptyCircleStyle": {
+                    "color": "lightgray",
+                    "borderColor": "#000",
+                    "borderWidth": 0,
+                    "borderType": "solid",
+                    "borderDashOffset": 0,
+                    "borderCap": "butt",
+                    "borderJoin": "bevel",
+                    "borderMiterLimit": 10,
+                    "opacity": 1
+                },
+                "data": [
+                    {
+                        "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                        "value": "22"
+                    },
+                    {
+                        "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                        "value": "2"
+                    },
+                    {
+                        "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                        "value": "25"
+                    },
+                    {
+                        "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                        "value": "27"
+                    },
+                    {
+                        "name": "\u5e02\u573a\u8425\u9500",
+                        "value": "11"
+                    },
+                    {
+                        "name": "\u5e94\u7528\u5316\u5b66",
+                        "value": "12"
+                    },
+                    {
+                        "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                        "value": "13"
+                    },
+                    {
+                        "name": "\u667a\u80fd\u533b\u5b66\u5de5\u7a0b",
+                        "value": "13"
+                    },
+                    {
+                        "name": "\u7269\u6d41\u7ba1\u7406",
+                        "value": "25"
+                    },
+                    {
+                        "name": "\u7535\u5b50\u5546\u52a1",
+                        "value": "8"
+                    },
+                    {
+                        "name": "\u7ecf\u6d4e\u5b66",
+                        "value": "2"
+                    },
+                    {
+                        "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                        "value": "22"
+                    },
+                    {
+                        "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                        "value": "18"
+                    },
+                    {
+                        "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                        "value": "43"
+                    }
+                ],
+                "radius": [
+                    "10%",
+                    "55%"
+                ],
+                "center": [
+                    "50%",
+                    "50%"
+                ],
+                "roseType": "area",
+                "label": {
+                    "show": true,
+                    "margin": 8,
+                    "formatter": "{b}:{c}"
+                },
+                "labelLine": {
+                    "show": true,
+                    "showAbove": false,
+                    "length": 15,
+                    "length2": 15,
+                    "smooth": false,
+                    "minTurnAngle": 90,
+                    "maxSurfaceAngle": 90
+                },
+                "rippleEffect": {
+                    "show": true,
+                    "brushType": "stroke",
+                    "scale": 2.5,
+                    "period": 4
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "currentIndex": 0,
+            "orient": "horizontal",
+            "autoPlay": false,
+            "controlPosition": "left",
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "left": "left",
+            "bottom": "-5px",
+            "width": "100%",
+            "label": {
+                "show": true,
+                "rotate": -45,
+                "margin": 8
+            },
+            "progress": {},
+            "data": [
+                "2020\u5e74\u79cb\u51ac\u671f",
+                "2021\u5e74\u6625\u590f\u671f",
+                "2021\u5e74\u79cb\u51ac\u671f",
+                "2022\u5e74\u6625\u590f\u671f",
+                "2022\u5e74\u79cb\u51ac\u671f",
+                "2023\u5e74\u6625\u590f\u671f",
+                "2023\u5e74\u79cb\u51ac\u671f",
+                "2024\u5e74\u6625\u590f\u671f",
+                "2024\u79cb\u51ac\u671f"
+            ]
+        },
+        "legend": [
+            {
+                "data": [
+                    "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                    "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                    "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                    "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                    "\u5e02\u573a\u8425\u9500",
+                    "\u5e94\u7528\u5316\u5b66",
+                    "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                    "\u667a\u80fd\u533b\u5b66\u5de5\u7a0b",
+                    "\u7269\u6d41\u7ba1\u7406",
+                    "\u7535\u5b50\u5546\u52a1",
+                    "\u7ecf\u6d4e\u5b66",
+                    "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                    "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                    "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b"
+                ],
+                "selected": {},
+                "show": false,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "backgroundColor": "transparent",
+                "borderColor": "#ccc",
+                "borderRadius": 0,
+                "pageButtonItemGap": 5,
+                "pageButtonPosition": "end",
+                "pageFormatter": "{current}/{total}",
+                "pageIconColor": "#2f4554",
+                "pageIconInactiveColor": "#aaa",
+                "pageIconSize": 15,
+                "animationDurationUpdate": 800,
+                "selector": false,
+                "selectorPosition": "auto",
+                "selectorItemGap": 7,
+                "selectorButtonGap": 10
+            }
+        ]
+    },
+    "options": [
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4e2d\u836f\u5b66",
+                            "value": "34"
+                        },
+                        {
+                            "name": "\u4e2d\u836f\u8d44\u6e90\u4e0e\u5f00\u53d1",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "4"
+                        },
+                        {
+                            "name": "\u4fdd\u9669\u5b66",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5065\u5eb7\u670d\u52a1\u4e0e\u7ba1\u7406",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5236\u836f\u5de5\u7a0b",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "25"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "12"
+                        },
+                        {
+                            "name": "\u536b\u751f\u68c0\u9a8c\u4e0e\u68c0\u75ab",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "10"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "9"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "20"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "24"
+                        },
+                        {
+                            "name": "\u751f\u7269\u5236\u836f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "25"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "4"
+                        },
+                        {
+                            "name": "\u82f1\u8bed",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "36"
+                        },
+                        {
+                            "name": "\u9884\u9632\u533b\u5b66",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                            "value": "20"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "12"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712020\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171246\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
+                            "value": "54"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "5"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "5"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "16"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "25"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "31"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "24"
+                        },
+                        {
+                            "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "6"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "29"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712021\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171197\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4e2d\u836f\u5b66",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
+                            "value": "10"
+                        },
+                        {
+                            "name": "\u5236\u836f\u5de5\u7a0b",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "5"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "19"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "22"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "13"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "6"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "30"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "7"
+                        },
+                        {
+                            "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "18"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "25"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712021\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171164\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "10"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "23"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "8"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                            "value": "9"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "1"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712022\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u517161\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4e2d\u836f\u5b66",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "6"
+                        },
+                        {
+                            "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                            "value": "12"
+                        },
+                        {
+                            "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "4"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "15"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "25"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712022\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u517182\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4e2d\u836f\u5b66",
+                            "value": "7"
+                        },
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                            "value": "4"
+                        },
+                        {
+                            "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "9"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "14"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "22"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "8"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "38"
+                        },
+                        {
+                            "name": "\u836f\u4e8b\u7ba1\u7406",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                            "value": "66"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "5"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712023\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171184\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4e2d\u533b\u5b66",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "23"
+                        },
+                        {
+                            "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                            "value": "46"
+                        },
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "13"
+                        },
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "9"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "1"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "18"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "3"
+                        },
+                        {
+                            "name": "\u836f\u4e8b\u7ba1\u7406",
+                            "value": "35"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "27"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                            "value": "10"
+                        }
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
+                        "show": true,
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u5c712023\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171191\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
             "series": [
                 {
                     "type": "pie",
@@ -4800,1435 +6304,225 @@
                     }
                 }
             ],
-            "timeline": {
-                "axisType": "category",
-                "currentIndex": 0,
-                "orient": "horizontal",
-                "autoPlay": false,
-                "controlPosition": "left",
-                "loop": true,
-                "rewind": false,
-                "show": true,
-                "inverse": false,
-                "left": "left",
-                "bottom": "-5px",
-                "width": "100%",
-                "label": {
-                    "show": true,
-                    "rotate": -45,
-                    "margin": 8
-                },
-                "progress": {},
-                "data": [
-                    "2020\u5e74\u79cb\u51ac\u671f",
-                    "2021\u5e74\u6625\u590f\u671f",
-                    "2021\u5e74\u79cb\u51ac\u671f",
-                    "2022\u5e74\u6625\u590f\u671f",
-                    "2022\u5e74\u79cb\u51ac\u671f",
-                    "2023\u5e74\u6625\u590f\u671f",
-                    "2023\u5e74\u79cb\u51ac\u671f",
-                    "2024\u5e74\u6625\u590f\u671f"
-                ]
-            },
-            "legend": [
+            "title": [
                 {
-                    "data": [
-                        "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                        "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
-                        "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                        "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                        "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                        "\u5de5\u5546\u7ba1\u7406\u7c7b",
-                        "\u5e02\u573a\u8425\u9500",
-                        "\u5e94\u7528\u5316\u5b66",
-                        "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                        "\u7269\u6d41\u7ba1\u7406",
-                        "\u7535\u5b50\u5546\u52a1",
-                        "\u836f\u4e8b\u7ba1\u7406",
-                        "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                        "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                        "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b"
-                    ],
-                    "selected": {},
-                    "show": false,
+                    "show": true,
+                    "text": "\u4e2d\u5c712024\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171280\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
                     "padding": 5,
                     "itemGap": 10,
-                    "itemWidth": 25,
-                    "itemHeight": 14,
-                    "backgroundColor": "transparent",
-                    "borderColor": "#ccc",
-                    "borderWidth": 1,
-                    "borderRadius": 0,
-                    "pageButtonItemGap": 5,
-                    "pageButtonPosition": "end",
-                    "pageFormatter": "{current}/{total}",
-                    "pageIconColor": "#2f4554",
-                    "pageIconInactiveColor": "#aaa",
-                    "pageIconSize": 15,
-                    "animationDurationUpdate": 800,
-                    "selector": false,
-                    "selectorPosition": "auto",
-                    "selectorItemGap": 7,
-                    "selectorButtonGap": 10
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
                 }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
             ]
         },
-        "options": [
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
+        {
+            "series": [
+                {
+                    "type": "pie",
+                    "colorBy": "data",
+                    "legendHoverLink": true,
+                    "selectedMode": false,
+                    "selectedOffset": 10,
+                    "clockwise": true,
+                    "startAngle": 90,
+                    "minAngle": 0,
+                    "minShowLabelAngle": 0,
+                    "avoidLabelOverlap": true,
+                    "stillShowZeroSum": true,
+                    "percentPrecision": 2,
+                    "showEmptyCircle": true,
+                    "emptyCircleStyle": {
+                        "color": "lightgray",
+                        "borderColor": "#000",
+                        "borderWidth": 0,
+                        "borderType": "solid",
+                        "borderDashOffset": 0,
+                        "borderCap": "butt",
+                        "borderJoin": "bevel",
+                        "borderMiterLimit": 10,
+                        "opacity": 1
+                    },
+                    "data": [
+                        {
+                            "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
+                            "value": "22"
                         },
-                        "data": [
-                            {
-                                "name": "\u4e2d\u836f\u5b66",
-                                "value": "34"
-                            },
-                            {
-                                "name": "\u4e2d\u836f\u8d44\u6e90\u4e0e\u5f00\u53d1",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "4"
-                            },
-                            {
-                                "name": "\u4fdd\u9669\u5b66",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5065\u5eb7\u670d\u52a1\u4e0e\u7ba1\u7406",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5236\u836f\u5de5\u7a0b",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "25"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "12"
-                            },
-                            {
-                                "name": "\u536b\u751f\u68c0\u9a8c\u4e0e\u68c0\u75ab",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "10"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "9"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "20"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "24"
-                            },
-                            {
-                                "name": "\u751f\u7269\u5236\u836f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "25"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "4"
-                            },
-                            {
-                                "name": "\u82f1\u8bed",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "36"
-                            },
-                            {
-                                "name": "\u9884\u9632\u533b\u5b66",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                                "value": "20"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "12"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
+                        {
+                            "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
+                            "value": "2"
                         },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
+                        {
+                            "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
+                            "value": "25"
                         },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
+                        {
+                            "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
+                            "value": "27"
+                        },
+                        {
+                            "name": "\u5e02\u573a\u8425\u9500",
+                            "value": "11"
+                        },
+                        {
+                            "name": "\u5e94\u7528\u5316\u5b66",
+                            "value": "12"
+                        },
+                        {
+                            "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
+                            "value": "13"
+                        },
+                        {
+                            "name": "\u667a\u80fd\u533b\u5b66\u5de5\u7a0b",
+                            "value": "13"
+                        },
+                        {
+                            "name": "\u7269\u6d41\u7ba1\u7406",
+                            "value": "25"
+                        },
+                        {
+                            "name": "\u7535\u5b50\u5546\u52a1",
+                            "value": "8"
+                        },
+                        {
+                            "name": "\u7ecf\u6d4e\u5b66",
+                            "value": "2"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
+                            "value": "22"
+                        },
+                        {
+                            "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
+                            "value": "18"
+                        },
+                        {
+                            "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
+                            "value": "43"
                         }
-                    }
-                ],
-                "title": [
-                    {
+                    ],
+                    "radius": [
+                        "10%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "area",
+                    "label": {
                         "show": true,
-                        "text": "\u4e2d\u5c712020\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171246\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
+                        "margin": 8,
+                        "formatter": "{b}:{c}"
+                    },
+                    "labelLine": {
+                        "show": true,
+                        "showAbove": false,
+                        "length": 15,
+                        "length2": 15,
+                        "smooth": false,
+                        "minTurnAngle": 90,
+                        "maxSurfaceAngle": 90
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
                     }
-                ],
-                "tooltip": {
+                }
+            ],
+            "title": [
+                {
                     "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
+                    "text": "\u4e2d\u5c712024\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
+                    "target": "blank",
+                    "subtext": "\u5171243\u4f4d\u5b66\u8005",
+                    "subtarget": "blank",
                     "padding": 5,
-                    "order": "seriesAsc"
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
                 },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
             },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
-                                "value": "54"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "5"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "5"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "16"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "25"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "31"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "24"
-                            },
-                            {
-                                "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "6"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "29"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712021\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171197\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4e2d\u836f\u5b66",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
-                                "value": "10"
-                            },
-                            {
-                                "name": "\u5236\u836f\u5de5\u7a0b",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "5"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "19"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "22"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "13"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "6"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "30"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "7"
-                            },
-                            {
-                                "name": "\u8ba1\u7b97\u673a\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "18"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "25"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712021\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171164\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "10"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "23"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "8"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                                "value": "9"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "1"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712022\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u517161\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4e2d\u836f\u5b66",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "6"
-                            },
-                            {
-                                "name": "\u4fe1\u606f\u7ba1\u7406\u4e0e\u4fe1\u606f\u7cfb\u7edf",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
-                                "value": "12"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "4"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "15"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "25"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712022\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u517182\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4e2d\u836f\u5b66",
-                                "value": "7"
-                            },
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
-                                "value": "4"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "9"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "14"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "22"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "8"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "38"
-                            },
-                            {
-                                "name": "\u836f\u4e8b\u7ba1\u7406",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                                "value": "66"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "5"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712023\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171184\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4e2d\u533b\u5b66",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "23"
-                            },
-                            {
-                                "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
-                                "value": "46"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "13"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "9"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "1"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "18"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u7ecf\u6d4e\u5b66",
-                                "value": "3"
-                            },
-                            {
-                                "name": "\u836f\u4e8b\u7ba1\u7406",
-                                "value": "35"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "27"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                                "value": "10"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712023\u5e74\u79cb\u51ac\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171191\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            },
-            {
-                "series": [
-                    {
-                        "type": "pie",
-                        "colorBy": "data",
-                        "legendHoverLink": true,
-                        "selectedMode": false,
-                        "selectedOffset": 10,
-                        "clockwise": true,
-                        "startAngle": 90,
-                        "minAngle": 0,
-                        "minShowLabelAngle": 0,
-                        "avoidLabelOverlap": true,
-                        "stillShowZeroSum": true,
-                        "percentPrecision": 2,
-                        "showEmptyCircle": true,
-                        "emptyCircleStyle": {
-                            "color": "lightgray",
-                            "borderColor": "#000",
-                            "borderWidth": 0,
-                            "borderType": "solid",
-                            "borderDashOffset": 0,
-                            "borderCap": "butt",
-                            "borderJoin": "bevel",
-                            "borderMiterLimit": 10,
-                            "opacity": 1
-                        },
-                        "data": [
-                            {
-                                "name": "\u4eba\u529b\u8d44\u6e90\u7ba1\u7406",
-                                "value": "6"
-                            },
-                            {
-                                "name": "\u516c\u5171\u4e8b\u4e1a\u7ba1\u7406",
-                                "value": "17"
-                            },
-                            {
-                                "name": "\u5316\u5986\u54c1\u79d1\u5b66\u4e0e\u6280\u672f",
-                                "value": "43"
-                            },
-                            {
-                                "name": "\u5316\u5b66\u5de5\u7a0b\u4e0e\u5de5\u827a",
-                                "value": "19"
-                            },
-                            {
-                                "name": "\u56fd\u9645\u7ecf\u6d4e\u4e0e\u8d38\u6613",
-                                "value": "7"
-                            },
-                            {
-                                "name": "\u5de5\u5546\u7ba1\u7406\u7c7b",
-                                "value": "29"
-                            },
-                            {
-                                "name": "\u5e02\u573a\u8425\u9500",
-                                "value": "15"
-                            },
-                            {
-                                "name": "\u5e94\u7528\u5316\u5b66",
-                                "value": "2"
-                            },
-                            {
-                                "name": "\u6570\u5b57\u5a92\u4f53\u6280\u672f",
-                                "value": "12"
-                            },
-                            {
-                                "name": "\u7269\u6d41\u7ba1\u7406",
-                                "value": "24"
-                            },
-                            {
-                                "name": "\u7535\u5b50\u5546\u52a1",
-                                "value": "16"
-                            },
-                            {
-                                "name": "\u836f\u4e8b\u7ba1\u7406",
-                                "value": "39"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u79d1\u5b66\u4e0e\u5de5\u7a0b",
-                                "value": "25"
-                            },
-                            {
-                                "name": "\u98df\u54c1\u8d28\u91cf\u4e0e\u5b89\u5168",
-                                "value": "9"
-                            },
-                            {
-                                "name": "\u9ad8\u5206\u5b50\u6750\u6599\u4e0e\u5de5\u7a0b",
-                                "value": "17"
-                            }
-                        ],
-                        "radius": [
-                            "10%",
-                            "55%"
-                        ],
-                        "center": [
-                            "50%",
-                            "50%"
-                        ],
-                        "roseType": "area",
-                        "label": {
-                            "show": true,
-                            "margin": 8,
-                            "formatter": "{b}:{c}"
-                        },
-                        "labelLine": {
-                            "show": true,
-                            "showAbove": false,
-                            "length": 15,
-                            "length2": 15,
-                            "smooth": false,
-                            "minTurnAngle": 90,
-                            "maxSurfaceAngle": 90
-                        },
-                        "rippleEffect": {
-                            "show": true,
-                            "brushType": "stroke",
-                            "scale": 2.5,
-                            "period": 4
-                        }
-                    }
-                ],
-                "title": [
-                    {
-                        "show": true,
-                        "text": "\u4e2d\u5c712024\u5e74\u6625\u590f\u671f\u5404\u4e1a---\u9752\u7750\u5ea6",
-                        "target": "blank",
-                        "subtext": "\u5171280\u4f4d\u5b66\u8005",
-                        "subtarget": "blank",
-                        "padding": 5,
-                        "itemGap": 10,
-                        "textAlign": "auto",
-                        "textVerticalAlign": "auto",
-                        "triggerEvent": false
-                    }
-                ],
-                "tooltip": {
-                    "show": true,
-                    "trigger": "item",
-                    "triggerOn": "mousemove|click",
-                    "axisPointer": {
-                        "type": "line"
-                    },
-                    "showContent": true,
-                    "alwaysShowContent": false,
-                    "showDelay": 0,
-                    "hideDelay": 100,
-                    "enterable": false,
-                    "confine": false,
-                    "appendToBody": false,
-                    "transitionDuration": 0.4,
-                    "textStyle": {
-                        "fontSize": 14
-                    },
-                    "borderWidth": 0,
-                    "padding": 5,
-                    "order": "seriesAsc"
-                },
-                "color": [
-                    "#5470c6",
-                    "#91cc75",
-                    "#fac858",
-                    "#ee6666",
-                    "#73c0de",
-                    "#3ba272",
-                    "#fc8452",
-                    "#9a60b4",
-                    "#ea7ccc"
-                ]
-            }
-        ]
-    };
-            chart_zhongShanMajor.setOption(option_zhongShanMajor);
-                window.addEventListener('resize', function(){
-                    chart_zhongShanMajor.resize();
-                })
-        </script>
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        }
+    ]
+};
+        chart_zhongShanMajor.setOption(option_zhongShanMajor);
+            window.addEventListener('resize', function(){
+                chart_zhongShanMajor.resize();
+            })
+    </script>
     
     <div class="card mt-1">
         <div class="card-body text-center">
@@ -6380,6 +6674,10 @@
                 {
                     "name": "2024\u5e74\u6625\u590f\u671f",
                     "value": 167
+                },
+                {
+                    "name": "2024\u5e74\u79cb\u51ac\u671f",
+                    "value": 82
                 }
             ],
             "radius": [
@@ -6438,7 +6736,8 @@
                 "2022\u5e74\u79cb\u51ac\u671f",
                 "2023\u5e74\u6625\u590f\u671f",
                 "2023\u5e74\u79cb\u51ac\u671f",
-                "2024\u5e74\u6625\u590f\u671f"
+                "2024\u5e74\u6625\u590f\u671f",
+                "2024\u5e74\u79cb\u51ac\u671f"
             ],
             "selected": {},
             "show": false,
@@ -6448,7 +6747,6 @@
             "itemHeight": 14,
             "backgroundColor": "transparent",
             "borderColor": "#ccc",
-            "borderWidth": 1,
             "borderRadius": 0,
             "pageButtonItemGap": 5,
             "pageButtonPosition": "end",
@@ -6490,7 +6788,7 @@
             "show": true,
             "text": "\u5386\u671f\u5954\u817e",
             "target": "blank",
-            "subtext": "\u51713318\u5de5\u4f5c\u65f6",
+            "subtext": "\u51713400\u5de5\u4f5c\u65f6",
             "subtarget": "blank",
             "padding": 5,
             "itemGap": 10,
@@ -6518,7 +6816,7 @@
                     <nav class="navbar ">
                         <ul class="navbar-nav align-items-center ">
                             <li class="nav-item ">
-                                <img src="./to_weed_data_for_people.png"style="width:35px;height:35px;margin-top:-10px;">
+                                <img src="./images/to_weed_data_for_people.png"style="width:35px;height:35px;margin-top:-10px;">
                             </li>
                             <li class="nav-item smFontSize" style="font-family:STXingkai;margin-top:-2px;margin-bottom:0px;">
                                 设计：曾文才
