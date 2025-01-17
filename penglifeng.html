@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/themes/chalk.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/jquery.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/ResizeSensor.js"></script>
+
+            <link rel="stylesheet"  href="https://assets.pyecharts.org/assets/v5/jquery-ui.css">
+
+</head>
+<body >
+    <style>.box {  } </style>
+        
+    <div class="box">
+                <div id="logo_title" class="chart-container" style="position: absolute; width: 1920px; height: 45px; top: 0px; left: 0px;"></div>
+    <script>
+        var chart_logo_title = echarts.init(
+            document.getElementById('logo_title'), 'chalk', {renderer: 'canvas'});
+        var option_logo_title = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u5927\u5b66\u751f\u6d88\u8d39\u60c5\u51b5\u8c03\u67e5\u95ee\u5377:\u516d\u666f\u56fe",
+            "target": "blank",
+            "subtext": "                 ---2024\u5e74\u79cb\u51ac\u671f",
+            "subtarget": "blank",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "graphic": {
+        "type": "group",
+        "diffChildrenByName": false,
+        "children": [
+            {
+                "type": "image",
+                "style": {
+                    "image": "yuan.svg",
+                    "x": 0,
+                    "y": 0,
+                    "width": 26,
+                    "height": 26,
+                    "opacity": 1
+                }
+            },
+            {
+                "type": "text",
+                "style": {
+                    "text": "\u5f6d\u674e\u70fd",
+                    "x": 4,
+                    "y": 30,
+                    "font": "5px \u6977\u4f53",
+                    "fontSize": 0,
+                    "textAlign": "left",
+                    "fill": "white",
+                    "line_width": 0
+                }
+            }
+        ],
+        "$action": "merge",
+        "rotation": 0,
+        "left": 3,
+        "top": 5,
+        "bounding": "all",
+        "z": 0,
+        "zlevel": 0,
+        "silent": false,
+        "invisible": false,
+        "ignore": false,
+        "cursor": "pointer",
+        "draggable": false,
+        "progressive": false,
+        "width": 0,
+        "height": 0
+    }
+};
+        chart_logo_title.setOption(option_logo_title);
+            window.addEventListener('resize', function(){
+                chart_logo_title.resize();
+            })
+    </script>
+<br/>                <div id="way_bar" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 46px; left: 0px;"></div>
+    <script>
+        var chart_way_bar = echarts.init(
+            document.getElementById('way_bar'), 'chalk', {renderer: 'svg'});
+        var option_way_bar = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "bar",
+            "legendHoverLink": true,
+            "data": [
+                16,
+                1,
+                3,
+                5
+            ],
+            "realtimeSort": false,
+            "showBackground": false,
+            "stackStrategy": "samesign",
+            "cursor": "pointer",
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "fontSize": 24
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u4e00\u8fb9\u82b1\u4e00\u8fb9\u6253\u7b97",
+                "\u5168\u90e8\u8ba1\u5212\u597d\u518d\u82b1",
+                "\u60f3\u82b1\u5c31\u82b1",
+                "\u80fd\u7701\u5219\u7701"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": false,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "text": " \u82b1\u94b1\u65b9\u5f0f",
+            "target": "blank",
+            "subtext": "23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "10px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_way_bar.setOption(option_way_bar);
+            window.addEventListener('resize', function(){
+                chart_way_bar.resize();
+            })
+    </script>
+<br/>                <div id="shop_rosetype" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 46px; left: 640.3px;"></div>
+    <script>
+        var chart_shop_rosetype = echarts.init(
+            document.getElementById('shop_rosetype'), 'chalk', {renderer: 'svg'});
+        var option_shop_rosetype = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "pie",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "\u62fc\u591a\u591a",
+                    "value": 4
+                },
+                {
+                    "name": "\u62fc\u591a\u591a\u250b\u4eac\u4e1c",
+                    "value": 2
+                },
+                {
+                    "name": "\u62fc\u591a\u591a\u250b\u6dd8\u5b9d",
+                    "value": 13
+                },
+                {
+                    "name": "\u6dd8\u5b9d",
+                    "value": 2
+                },
+                {
+                    "name": "\u6dd8\u5b9d\u250b\u4eac\u4e1c",
+                    "value": 4
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "area",
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u62fc\u591a\u591a",
+                "\u62fc\u591a\u591a\u250b\u4eac\u4e1c",
+                "\u62fc\u591a\u591a\u250b\u6dd8\u5b9d",
+                "\u6dd8\u5b9d",
+                "\u6dd8\u5b9d\u250b\u4eac\u4e1c"
+            ],
+            "selected": {},
+            "show": false,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u5e73\u5e38\u4f7f\u7528\u6700\u591a\u7684\u4e24\u4e2a\u8d2d\u7269\u8f6f\u4ef6",
+            "target": "blank",
+            "subtext": "23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "10px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_shop_rosetype.setOption(option_shop_rosetype);
+            window.addEventListener('resize', function(){
+                chart_shop_rosetype.resize();
+            })
+    </script>
+<br/>                <div id="pay_wordcloud" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 46px; left: 1280.6px;"></div>
+    <script>
+        var chart_pay_wordcloud = echarts.init(
+            document.getElementById('pay_wordcloud'), 'chalk', {renderer: 'svg'});
+        var option_pay_wordcloud = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "wordCloud",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                32,
+                60
+            ],
+            "data": [
+                {
+                    "name": "\u4ea4\u901a\u901a\u8baf\u250b\u751f\u6d3b\u7528\u54c1",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(68,4,80)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df",
+                    "value": 3.0,
+                    "textStyle": {
+                        "color": "rgb(110,149,103)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u4ea4\u901a\u901a\u8baf",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(112,76,66)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u4ea4\u901a\u901a\u8baf\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(2,116,113)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u4ea4\u901a\u901a\u8baf\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(93,31,0)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u4ea4\u901a\u901a\u8baf\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645\u250b\u5b66\u4e60\u7528\u54c1",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(128,131,93)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(158,12,28)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u751f\u6d3b\u7528\u54c1",
+                    "value": 4.0,
+                    "textStyle": {
+                        "color": "rgb(102,139,158)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u751f\u6d3b\u7528\u54c1\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 2.0,
+                    "textStyle": {
+                        "color": "rgb(57,133,109)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(70,9,12)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(154,146,153)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u4ea4\u901a\u901a\u8baf\u250b\u751f\u6d3b\u7528\u54c1",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(100,110,58)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u4ea4\u901a\u901a\u8baf\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(93,86,114)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u65e5\u5e38\u4ea4\u9645\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(89,8,155)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u751f\u6d3b\u7528\u54c1",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(4,156,159)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u751f\u6d3b\u7528\u54c1\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(65,108,118)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(144,12,40)"
+                    }
+                },
+                {
+                    "name": "\u4f19\u98df\u250b\u8d2d\u7f6e\u8863\u7269\u250b\u751f\u6d3b\u7528\u54c1\u250b\u65e5\u5e38\u4ea4\u9645\u250b\u5a31\u4e50\u65c5\u6e38",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(142,156,123)"
+                    }
+                },
+                {
+                    "name": "\u8d2d\u7f6e\u8863\u7269",
+                    "value": 1.0,
+                    "textStyle": {
+                        "color": "rgb(108,18,13)"
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "  \u6708\u6d88\u8d39",
+            "target": "blank",
+            "subtext": "23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "10px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_pay_wordcloud.setOption(option_pay_wordcloud);
+            window.addEventListener('resize', function(){
+                chart_pay_wordcloud.resize();
+            })
+    </script>
+<br/>                <div id="alimony_Line" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 487.5px; left: 0px;"></div>
+    <script>
+        var chart_alimony_Line = echarts.init(
+            document.getElementById('alimony_Line'), 'chalk', {renderer: 'svg'});
+        var option_alimony_Line = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "line",
+            "connectNulls": false,
+            "xAxisIndex": 0,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "stackStrategy": "samesign",
+            "data": [
+                [
+                    "\u4e0d\u591f",
+                    7
+                ],
+                [
+                    "\u521a\u597d\u591f\u7528",
+                    16
+                ],
+                [
+                    "\u6709\u5bcc\u4f59",
+                    2
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "fontSize": 40
+            },
+            "logBase": 10,
+            "seriesLayoutBy": "column",
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "zlevel": 0,
+            "z": 0,
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid",
+                    "color": "while"
+                }
+            },
+            "axisLabel": {
+                "show": true,
+                "margin": 8,
+                "fontSize": 30
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u4e0d\u591f",
+                "\u521a\u597d\u591f\u7528",
+                "\u6709\u5bcc\u4f59"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": false,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "text": "\u60a8\u89c9\u5f97\u81ea\u5df1\u7684\u751f\u6d3b\u8d39  ",
+            "target": "blank",
+            "subtext": "      23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "10px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_alimony_Line.setOption(option_alimony_Line);
+            window.addEventListener('resize', function(){
+                chart_alimony_Line.resize();
+            })
+    </script>
+<br/>                <div id="play_pictorialbar" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 487.5px; left: 640.3px;"></div>
+    <script>
+        var chart_play_pictorialbar = echarts.init(
+            document.getElementById('play_pictorialbar'), 'chalk', {renderer: 'svg'});
+        var option_play_pictorialbar = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "pictorialBar",
+            "symbol": "roundRect",
+            "symbolSize": 30,
+            "symbolOffset": [
+                0,
+                0
+            ],
+            "symbolRepeat": "fixed",
+            "symbolClip": true,
+            "data": [
+                8,
+                17
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8,
+                "fontSize": 32
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": false,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "margin": 8,
+                "fontSize": 9
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u4e00\u5468\u4e00\u6b21\u6216\u4e24\u6b21",
+                "\u4e00\u6708\u4e00\u6b21\u6216\u4e24\u6b21"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "text": "\u60a8\u89c9\u5f97\u81ea\u5df1\u7684\u751f\u6d3b\u8d39  ",
+            "target": "blank",
+            "subtext": "      23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "20px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_play_pictorialbar.setOption(option_play_pictorialbar);
+            window.addEventListener('resize', function(){
+                chart_play_pictorialbar.resize();
+            })
+    </script>
+<br/>                <div id="luxury_polar" class="chart-container" style="position: absolute; width: 639.3px; height: 439.5px; top: 487.5px; left: 1280.6px;"></div>
+    <script>
+        var chart_luxury_polar = echarts.init(
+            document.getElementById('luxury_polar'), 'chalk', {renderer: 'svg'});
+        var option_luxury_polar = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "effectScatter",
+            "coordinateSystem": "polar",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbol": "diamond",
+            "symbolSize": 20,
+            "data": [
+                3,
+                2,
+                1,
+                3,
+                1,
+                1,
+                1,
+                1,
+                6,
+                2,
+                2,
+                1,
+                1
+            ],
+            "label": {
+                "show": false,
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "radiusAxis": {
+        "nameGap": 15,
+        "inverse": false,
+        "scale": false,
+        "splitNumber": 5,
+        "minInterval": 0,
+        "splitLine": {
+            "show": false,
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            }
+        },
+        "axisLine": {
+            "show": true,
+            "onZero": true,
+            "onZeroAxisIndex": 0,
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid",
+                "color": "white"
+            }
+        },
+        "axisLabel": {
+            "show": true,
+            "color": "white",
+            "margin": 8,
+            "fontSize": 15
+        }
+    },
+    "angleAxis": {
+        "startAngle": 0,
+        "data": [
+            "\u5176\u4ed6",
+            "\u5403\u559d",
+            "\u5403\u559d\u250b\u5b58\u8d77\u6765",
+            "\u5403\u559d\u250b\u65c5\u6e38",
+            "\u5403\u559d\u250b\u65c5\u6e38\u250b\u5b58\u8d77\u6765",
+            "\u5403\u559d\u250b\u65c5\u6e38\u250b\u6dfb\u7f6e\u8863\u7269\u250b\u4e70\u4e66",
+            "\u5403\u559d\u250b\u6dfb\u7f6e\u8863\u7269",
+            "\u5403\u559d\u250b\u6dfb\u7f6e\u8863\u7269\u250b\u5176\u4ed6",
+            "\u5b58\u8d77\u6765",
+            "\u65c5\u6e38",
+            "\u65c5\u6e38\u250b\u5b58\u8d77\u6765",
+            "\u65c5\u6e38\u250b\u6dfb\u7f6e\u8863\u7269\u250b\u5b58\u8d77\u6765",
+            "\u6dfb\u7f6e\u8863\u7269\u250b\u4e70\u4e66\u250b\u5b58\u8d77\u6765"
+        ],
+        "clockwise": false,
+        "scale": false,
+        "splitNumber": 5,
+        "axisLine": {
+            "show": true,
+            "onZero": true,
+            "onZeroAxisIndex": 0,
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid",
+                "color": "white"
+            }
+        },
+        "axisLabel": {
+            "show": true,
+            "color": "white",
+            "margin": 8,
+            "fontSize": 10
+        }
+    },
+    "polar": {
+        "center": [
+            "50%",
+            "55%"
+        ]
+    },
+    "title": [
+        {
+            "show": true,
+            "text": " \u6bcf\u6708\u7684\u751f\u6d3b\u8d39\u6709\u4f59\u65f6",
+            "target": "blank",
+            "subtext": "23\u6570\u5a922\u5f6d\u674e\u70fd",
+            "subtarget": "blank",
+            "left": "center",
+            "top": "10px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_luxury_polar.setOption(option_luxury_polar);
+            window.addEventListener('resize', function(){
+                chart_luxury_polar.resize();
+            })
+    </script>
+<br/>                <div id="sign_name" class="chart-container" style="position: absolute; width: 1920px; height: 45px; top: 930px; left: 0px;"></div>
+    <script>
+        var chart_sign_name = echarts.init(
+            document.getElementById('sign_name'), 'chalk', {renderer: 'canvas'});
+        var option_sign_name = {
+    "backgroundColor": "#1772b4",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "graphic": {
+        "type": "group",
+        "diffChildrenByName": false,
+        "children": [
+            {
+                "type": "image",
+                "style": {
+                    "image": "\u5fae\u4fe1\u56fe\u7247_20240904170858.png",
+                    "x": 0,
+                    "y": 0,
+                    "width": 26,
+                    "height": 26,
+                    "opacity": 1
+                }
+            },
+            {
+                "type": "text",
+                "style": {
+                    "text": "\u5f6d\u674e\u70fd",
+                    "x": 4,
+                    "y": 30,
+                    "font": "5px \u6977\u4f53",
+                    "fontSize": 0,
+                    "textAlign": "left",
+                    "fill": "white",
+                    "line_width": 0
+                }
+            }
+        ],
+        "$action": "merge",
+        "rotation": 0,
+        "left": "95%",
+        "top": 5,
+        "bounding": "all",
+        "z": 0,
+        "zlevel": 0,
+        "silent": false,
+        "invisible": false,
+        "ignore": false,
+        "cursor": "pointer",
+        "draggable": false,
+        "progressive": false,
+        "width": 0,
+        "height": 0
+    }
+};
+        chart_sign_name.setOption(option_sign_name);
+            window.addEventListener('resize', function(){
+                chart_sign_name.resize();
+            })
+    </script>
+<br/>    </div>
+    <script>
+            $('#logo_title').css('border-style', 'dashed').css('border-width', '0px');$("#logo_title>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#logo_title'), function() { chart_logo_title.resize()});
+            $('#way_bar').css('border-style', 'dashed').css('border-width', '0px');$("#way_bar>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#way_bar'), function() { chart_way_bar.resize()});
+            $('#shop_rosetype').css('border-style', 'dashed').css('border-width', '0px');$("#shop_rosetype>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#shop_rosetype'), function() { chart_shop_rosetype.resize()});
+            $('#pay_wordcloud').css('border-style', 'dashed').css('border-width', '0px');$("#pay_wordcloud>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#pay_wordcloud'), function() { chart_pay_wordcloud.resize()});
+            $('#alimony_Line').css('border-style', 'dashed').css('border-width', '0px');$("#alimony_Line>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#alimony_Line'), function() { chart_alimony_Line.resize()});
+            $('#play_pictorialbar').css('border-style', 'dashed').css('border-width', '0px');$("#play_pictorialbar>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#play_pictorialbar'), function() { chart_play_pictorialbar.resize()});
+            $('#luxury_polar').css('border-style', 'dashed').css('border-width', '0px');$("#luxury_polar>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#luxury_polar'), function() { chart_luxury_polar.resize()});
+            $('#sign_name').css('border-style', 'dashed').css('border-width', '0px');$("#sign_name>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#sign_name'), function() { chart_sign_name.resize()});
+            var charts_id = ['logo_title','way_bar','shop_rosetype','pay_wordcloud','alimony_Line','play_pictorialbar','luxury_polar','sign_name'];
+function downloadCfg () {
+    const fileName = 'chart_config.json'
+    let downLink = document.createElement('a')
+    downLink.download = fileName
+
+    let result = []
+    for(let i=0; i<charts_id.length; i++) {
+        chart = $('#'+charts_id[i])
+        result.push({
+            cid: charts_id[i],
+            width: chart.css("width"),
+            height: chart.css("height"),
+            top: chart.offset().top + "px",
+            left: chart.offset().left + "px"
+        })
+    }
+
+    let blob = new Blob([JSON.stringify(result)])
+    downLink.href = URL.createObjectURL(blob)
+    document.body.appendChild(downLink)
+    downLink.click()
+    document.body.removeChild(downLink)
+}
+    </script>
+</body>
+</html>
